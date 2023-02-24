@@ -5,8 +5,8 @@ function Card(props){
      }
     return(
         <div className="flip-card"  >
-        <div className="flip-card-inner" onMouseEnter={clickhandler}>
-          <div className="flip-card-front" >
+        <div className="flip-card-inner"  style={{border: `solid thick ${props.alphabet.colour}`}}>
+          <div className="flip-card-front" onMouseEnter={clickhandler} style={{color:`${props.alphabet.colour}`}}>
             <h1>{props.alphabet.name}</h1>
             <p>{props.alphabet.desc}</p>
             <br/>
