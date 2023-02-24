@@ -12,7 +12,7 @@ function Card(props){
             <br/>
             <img src={props.alphabet.img_url} alt={props.alphabet.desc}   width="120" height="120" />
           </div>
-          <div className="flip-card-back" onClick={clickhandler}>
+          <div className="flip-card-back" onMouseOver={clickhandler}>
             <img src={props.alphabet.img_url} alt={props.alphabet.desc} data-el={props.alphabet.audio_desc_url}  width="100%" height="100%" />
            
           </div>
