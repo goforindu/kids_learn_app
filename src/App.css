@@ -54,12 +54,29 @@ padding: 10px;
  
 }
 #heading{
-  font-size: 30px;
-  color:tomato;
-  text-align: center;
+  display: flex;
+  height: 60px;
+ 
+  justify-content: center;
+  align-items: center;
   padding: 10px;
   margin: 20px;
 }
+#heading > button{
+  font-size: 30px;
+  color:darkred;
+  border: none;
+  background-color:#68aa1a;
+  box-shadow:1px 1px 5px #000,inset 1px 1px 2px #87cc35,0 0 2px #68aa1a, inset 0 18px 0 #78bf25;
+  cursor: pointer;
+}
+#heading > button:hover {
+  font-size: 30px;
+  color:darkred;
+  border: none;
+  background-color:#72b427;
+  box-shadow:1px 1px 5px #000,inset 1px 1px 2px #72b427,0 0 2px #83ca32, inset 0 18px 0 #83ca32;
+  }
 .flip-card {
   background-color: #f1f1f1;
   margin: 5px;
