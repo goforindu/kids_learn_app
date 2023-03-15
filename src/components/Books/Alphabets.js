@@ -14,7 +14,7 @@ function Alphabets(props){
     useEffect(()=>{
         const getAlphabets=async()=>{
           const response=await api.get(api_url);
-          if(alphabets) setAlphabets(response.data);
+          if(response.data) setAlphabets(response.data);
         }
         getAlphabets();
     },[])
