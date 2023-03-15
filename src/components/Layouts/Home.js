@@ -4,6 +4,8 @@ import styles from "./home.module.css";
 import Header from "./Header";
 
 const Home=()=>{
+  //const base_url="http://localhost:3000";
+  const  base_url="https://kidsappdata.netlify.app";
     return(
       <>
       <Header heading="Let's Learn App Your Kids First Audio Book"/>
@@ -12,7 +14,7 @@ const Home=()=>{
   <div className={styles.column}>
     <div className={styles.card}>
     <Link to='/alphabets'>
-                <img src="http://localhost:3001/assets/home/abc.png" alt="alphabets" width="150" height="150"/>
+                <img src={`${base_url}/assets/home/abc.png`} alt="alphabets" width="150" height="150"/>
             </Link>
     </div>
   </div>
@@ -20,50 +22,50 @@ const Home=()=>{
   <div className={styles.column}>
     <div className={styles.card}>
     <Link to='/numbers'>
-                <img src="http://localhost:3001/assets/home/numbers.png" alt="numbers" width="150" height="150"/>
+                <img src={`${base_url}/assets/home/numbers.png`} alt="numbers" width="150" height="150"/>
             </Link>
     </div>
   </div>
   
   <div className={styles.column}>
     <div  className={styles.card}>
-    <Link to='/shapes'><div><img src="http://localhost:3001/assets/home/shapes.png" alt="shapes" width="150" height="150"/></div></Link>
+    <Link to='/shapes'><div><img src={`${base_url}/assets/home/shapes.png`} alt="shapes" width="150" height="150"/></div></Link>
     </div>
   </div>
   
   <div className={styles.column}>
     <div  className={styles.card}>
-    <Link to='/fruits'> <div><img src="http://localhost:3001/assets/home/fruits.png" alt="fruits" width="150" height="150"/></div></Link>
+    <Link to='/fruits'> <div><img src={`${base_url}/assets/home/fruits.png`} alt="fruits" width="150" height="150"/></div></Link>
     </div>
   </div>
   <div className={styles.column}>
     <div  className={styles.card}>
-    <Link to='/colours'><div><img src="http://localhost:3001/assets/home/colours.png" alt="colours" width="150" height="150"/></div></Link>
+    <Link to='/colours'><div><img src={`${base_url}/assets/home/colours.png`} alt="colours" width="150" height="150"/></div></Link>
     </div>
   </div>
   <div className={styles.column}>
     <div  className={styles.card}>
-    <Link to='/transports'> <div><img src="http://localhost:3001/assets/home/transports.png" alt="means of transports" width="150" height="150"/></div></Link>
+    <Link to='/transports'> <div><img src={`${base_url}/assets/home/transports.png`} alt="means of transports" width="150" height="150"/></div></Link>
     </div>
   </div>
   <div className={styles.column}>
     <div  className={styles.card}>
-    <Link to='/birds'><div><img src="http://localhost:3001/assets/home/birds.png" alt="birds" width="150" height="150"/></div></Link>
+    <Link to='/birds'><div><img src={`${base_url}/assets/home/birds.png`} alt="birds" width="150" height="150"/></div></Link>
     </div>
   </div>
   <div className={styles.column}>
     <div  className={styles.card}>
-    <Link to='/vegetables'> <div><img src="http://localhost:3001/assets/home/vegetables.png" alt="vegetables" width="150" height="150"/></div></Link>
+    <Link to='/vegetables'> <div><img src={`${base_url}/assets/home/vegetables.png`} alt="vegetables" width="150" height="150"/></div></Link>
     </div>
   </div>
   <div className={styles.column}>
     <div  className={styles.card}>
-    <Link to='/farm'> <div><img src="http://localhost:3001/assets/home/farm.png" alt="farm animals" width="150" height="150"/></div></Link>
+    <Link to='/farm'> <div><img src={`${base_url}/assets/home/farm.png`} alt="farm animals" width="150" height="150"/></div></Link>
     </div>
   </div>
   <div className={styles.column}>
     <div  className={styles.card}>
-    <Link to='/wild'> <div><img src="http://localhost:3001/assets/home/wild.png" alt="wild animals" width="150" height="150"/></div></Link>
+    <Link to='/wild'> <div><img src={`${base_url}/assets/home/wild.png`} alt="wild animals" width="150" height="150"/></div></Link>
     </div>
   </div>
 </div>
