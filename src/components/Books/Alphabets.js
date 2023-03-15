@@ -21,7 +21,7 @@ function Alphabets(props){
           if(alphabets) setAlphabets(alphabets);
         }
         getAlphabets();
-    },[])
+    },[alphabets])
 
     const[audiosrc, setAudiosrc]=useState('');
     const clickhandler=(data)=>{
