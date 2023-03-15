@@ -1,49 +1,33 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Alphabets from './components/Books/Alphabets';
 import './App.css';
-import AudioPlayer from './components/UI/AudioPlayer';
-import api from './api/alphabets';
-
+import Home from './components/Layouts/Home';
+import {Routes, Route} from 'react-router-dom';
 
 function App() {
-  const[audiosrc, setAudiosrc]=useState();
-  const [alphabets,setAlphabets]=useState([]);
+ 
 
-  // retrive alphabets
+ 
 
-  const retriveAlphabets=async()=>{
-    const response=await api.get("/alphabets");
-    return response.data;
-  }
-
-  useEffect(()=>{
-      const getAlphabets=async()=>{
-        const alphabets=await retriveAlphabets();
-        if(alphabets) setAlphabets(alphabets);
-      }
-      getAlphabets();
-  },[])
-  const clickhandler=(data)=>{
-    console.log(data);
-   setAudiosrc(data);
-   let audio = document.getElementById("alphabetsSound");
-   setTimeout( function() {
-    audio.play();
-}, 1);
-  
-  console.log("audio play");
-  }
-
-  const showContent=()=>{
-    document.getElementById("heading").style.display="none";
-  }
+ 
   return (
-    <div className="App">
-      <div id="heading"> <button onClick={showContent}>Play A to Z</button></div>
-     
-      <AudioPlayer audiosrc={audiosrc} />
-      <Alphabets alphabets={alphabets} clickhandle={clickhandler}/>
-    </div>
+    <>
+    <Routes>
+       <Route path="/home" element={<Home/>}/>
+       <Route path="/alphabets" element={ <Alphabets type={"alphabets"} title="Alphabets A to Z"/>}/>
+       <Route path="/numbers" element={ <Alphabets type={"numbers"} title="Numbers 1 to 20"/>}/>
+       <Route path="/shapes" element={ <Alphabets type={"shapes"} title="Shapes"/>}/>
+       <Route path="/fruits" element={ <Alphabets type={"fruits"} title="Fruits"/>}/>
+       <Route path="/vegetables" element={ <Alphabets type={"vegetables"} title="Vegetables"/>}/>
+       <Route path="/transports" element={ <Alphabets type={"transports"} title="Transports"/>}/>
+       <Route path="/colours" element={ <Alphabets type={"colours"} title="Colours"/>}/>
+       <Route path="/birds" element={ <Alphabets type={"birds"} title="Birds" />}/>
+       <Route path="/wild" element={ <Alphabets type={"wild"} title="Wild Animals"/>}/>
+       <Route path="/farm" element={ <Alphabets type={"farm"} title="Farm Animals"/>}/>
+      </Routes>
+    </>
+      
+    
   );
 }
 

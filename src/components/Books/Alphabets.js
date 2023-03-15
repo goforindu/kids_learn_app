@@ -1,16 +1,51 @@
-import React from 'react';
+import React,{useEffect, useState} from 'react';
 import Card from '../UI/Card';
+import AudioPlayer from '../UI/AudioPlayer';
+import api from '../../api/alphabets';
+import Header from '../Layouts/Header';
 function Alphabets(props){
-    const clickhandler=(data)=>{
-      props.clickhandle(data);
+    
+   const api_url='/'+props.type;
+    const [alphabets,setAlphabets]=useState([]);
+
+    // retrive alphabets
+  
+    const retriveAlphabets=async()=>{
+      const response=await api.get(api_url);
+      return response.data;
     }
-    const alphabets=props.alphabets.map(alphabet=>{
-       return <Card key={alphabet.name} alphabet={alphabet} clickhandle={clickhandler}/>
+  
+    useEffect(()=>{
+        const getAlphabets=async()=>{
+          const alphabets=await retriveAlphabets();
+          if(alphabets) setAlphabets(alphabets);
+        }
+        getAlphabets();
+    },[])
+
+    const[audiosrc, setAudiosrc]=useState('');
+    const clickhandler=(data)=>{
+        console.log(data);
+        setAudiosrc(data);
+        let audio = document.getElementById("alphabetsSound");
+        setTimeout( function() {
+        audio.play();
+}, 1);
+  console.log("audio play");
+  }
+    const alphabetsArr=alphabets.map(alphabet=>{
+       return <Card key={alphabet.name} alphabet={alphabet} type={props.type} clickhandle={clickhandler}/>
     })
     return(
+        <>
+        <Header heading={props.title}/>
+        <AudioPlayer audiosrc={audiosrc} /> 
         <div className="grid-container">
-            {alphabets}
+           
+            {alphabetsArr}
         </div>
+        </>
+        
     );
 }
 export default Alphabets;
