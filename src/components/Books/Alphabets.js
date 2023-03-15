@@ -10,18 +10,14 @@ function Alphabets(props){
 
     // retrive alphabets
   
-    const retriveAlphabets=async()=>{
-      const response=await api.get(api_url);
-      return response.data;
-    }
-  
+   
     useEffect(()=>{
         const getAlphabets=async()=>{
-          const alphabets=await retriveAlphabets();
-          if(alphabets) setAlphabets(alphabets);
+          const response=await api.get(api_url);
+          if(alphabets) setAlphabets(response.data);
         }
         getAlphabets();
-    },[retriveAlphabets])
+    },[])
 
     const[audiosrc, setAudiosrc]=useState('');
     const clickhandler=(data)=>{
