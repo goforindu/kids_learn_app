@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styles from './header.module.css';
 const Header=(props)=>{
-    const[heading,setHeading]=useState(props.heading);
+   const heading=props.heading;
    
  return(
         <div className={styles.topnav}>{heading}</div>
