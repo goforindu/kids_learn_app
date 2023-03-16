@@ -13,7 +13,7 @@ function App() {
   return (
     <>
     <Routes>
-       <Route path="/home" element={<Home/>}/>
+       <Route path="/" element={<Home/>}/>
        <Route path="/alphabets" element={ <Alphabets type={"alphabets"} title="Alphabets A to Z"/>}/>
        <Route path="/numbers" element={ <Alphabets type={"numbers"} title="Numbers 1 to 20"/>}/>
        <Route path="/shapes" element={ <Alphabets type={"shapes"} title="Shapes"/>}/>
