@@ -5,19 +5,20 @@ import api from '../../api/alphabets';
 import Header from '../Layouts/Header';
 function Alphabets(props){
     
-   const api_url='/'+props.type;
+  // const api_url='/'+props.type;
     const [alphabets,setAlphabets]=useState([]);
-
+    const[apiulr, setApiurl]=useState('/'+props.type);
     // retrive alphabets
   
    
     useEffect(()=>{
+        setApiurl('/'+props.type);
         const getAlphabets=async()=>{
-          const response=await api.get(api_url);
+          const response=await api.get(apiulr);
           if(response.data) setAlphabets(response.data);
         }
         getAlphabets();
-    },[])
+    },[props.type,apiulr]);
 
     const[audiosrc, setAudiosrc]=useState('');
     const clickhandler=(data)=>{
