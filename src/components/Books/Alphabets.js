@@ -4,7 +4,7 @@ import AudioPlayer from '../UI/AudioPlayer';
 import api1 from '../../api/alphabets';
 import api2 from '../../api/shapesfruitswild';
 import api3 from '../../api/vegetablesfarms';
-import api4 from '../../api/shapesfruitswild';
+import api4 from '../../api/transportsbirds';
 import Header from '../Layouts/Header';
 function Alphabets(props){
     
