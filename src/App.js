@@ -14,10 +14,10 @@ function App() {
     <>
     <Routes>
        <Route path="/" element={<Home/>}/>
-       <Route path="/alphabets" element={ <Alphabets type={"alphabets"} title="Alphabets A to Z"/>}/>
-       <Route path="/numbers" element={ <Alphabets type={"numbers"} title="Numbers 1 to 20"/>}/>
-       <Route path="/shapes" element={ <Alphabets type={"shapes"} title="Shapes"/>}/>
-       <Route path="/fruits" element={ <Alphabets type={"fruits"} title="Fruits"/>}/>
+       <Route path="/alphabets" element={ <Alphabets type={"alphabets"} title="Alphabets A to Z" api="api1"/>}/>
+       <Route path="/numbers" element={ <Alphabets type={"numbers"} title="Numbers 1 to 20" api="api1"/>}/>
+       <Route path="/shapes" element={ <Alphabets type={"shapes"} title="Shapes" api="api2"/>}/>
+       <Route path="/fruits" element={ <Alphabets type={"fruits"} title="Fruits" api="api2"/>}/>
        <Route path="/vegetables" element={ <Alphabets type={"vegetables"} title="Vegetables"/>}/>
        <Route path="/transports" element={ <Alphabets type={"transports"} title="Transports"/>}/>
        <Route path="/colours" element={ <Alphabets type={"colours"} title="Colours"/>}/>

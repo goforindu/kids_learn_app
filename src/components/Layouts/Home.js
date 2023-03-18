@@ -4,8 +4,8 @@ import styles from "./home.module.css";
 import Header from "./Header";
 
 const Home=()=>{
-  //const base_url="http://localhost:3000";
-  const  base_url="https://kidsappdata.netlify.app";
+ // const base_url="http://localhost:3000";
+ const  base_url="https://kidsappdata.netlify.app";
     return(
       <>
       <Header heading="Let's Learn App Your Kids First Audio Book"/>
