@@ -2,7 +2,7 @@ import React from 'react';
 
 function Card(props){
   //const base_url="http://localhost:3000";
-//const  base_url="https://kidsappdata.netlify.app";
+const  base_url="https://kidsappdata.netlify.app";
 const url_img=base_url+"/assets/"+props.type+"/"+props.alphabet.img_url;
 const url_audio=base_url+"/assets/"+props.type+"/audio/"+props.alphabet.audio_desc_url;
 let back_img;
